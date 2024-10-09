@@ -27,7 +27,7 @@ static void toggle_secondary_led(const bool on) {
   } else if (OHDPlatform::instance().is_rock5_a()) {
     static constexpr auto filename = "/sys/class/leds/user-led2/brightness";
     const auto content = on ? "1" : "0";
-    #OHDFilesystemUtil::write_file(filename, content);
+    //OHDFilesystemUtil::write_file(filename, content);
   } else if (OHDPlatform::instance().is_x20()) {
     static constexpr auto filename =
         "/sys/class/leds/openhd-x20dev:red:usr/brightness";
@@ -53,11 +53,11 @@ static void toggle_primary_led(const bool on) {
   } else if (OHDPlatform::instance().is_rock5_a()) {
     static constexpr auto filename = "/sys/class/leds/user-led1/brightness";
     const auto content = on ? "1" : "0";
-    #OHDFilesystemUtil::write_file(filename, content);
+    //OHDFilesystemUtil::write_file(filename, content);
   } else if (OHDPlatform::instance().is_rock5_b()) {
     static constexpr auto filename = "/sys/class/leds/mmc0::/brightness";
     const auto content = on ? "1" : "0";
-    #OHDFilesystemUtil::write_file(filename, content);
+    //OHDFilesystemUtil::write_file(filename, content);
   } else if (OHDPlatform::instance().is_x20()) {
     static constexpr auto filename =
         "/sys/class/leds/openhd-x20dev:green:usr/brightness";
